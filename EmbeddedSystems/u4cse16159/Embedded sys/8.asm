@@ -1,0 +1,9 @@
+		AREA pgm1,CODE,READWRITE;
+ENTRY	
+		MOV r1,#1
+		MOV r2,#2
+		MOV r3,0x000003
+		EOR r1,r2
+		STR r1,[r3]
+LOOP 	B  LOOP
+		END

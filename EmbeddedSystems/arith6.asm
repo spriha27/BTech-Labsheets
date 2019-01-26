@@ -1,0 +1,12 @@
+		AREA arith6, CODE, READWRITE
+ENTRY
+		MOV R0, #100
+		MOV R1, #200
+		MOV R2, #200
+		ADD R0, R1
+		SUB R0, R2
+		STR R0, Y
+Stop	B Stop
+		AREA arith6, CODE, READWRITE
+Y		DCD 8		
+		END

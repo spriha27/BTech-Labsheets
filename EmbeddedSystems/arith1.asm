@@ -1,0 +1,15 @@
+		AREA arith1, CODE, READWRITE
+ENTRY
+		MOV R0, #1
+		MOV R1, #2
+		MUL R2, R0, R1
+		MOV R3, #123
+		SUB R4, R3, R2
+		MOV R7, #200
+		MOV R8, #300
+		ADD R9, R8, R7
+		ADD R5, R9, R4
+LOOP 	B LOOP
+
+		END
+		

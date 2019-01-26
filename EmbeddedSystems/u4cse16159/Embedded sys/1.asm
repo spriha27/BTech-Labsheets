@@ -1,0 +1,10 @@
+	AREA pgm1, CODE, READWRITE
+ENTRY
+	LDR R0,val1
+	LDR R1,val2
+	SUB R1, R1, R0
+STOP
+val1 DCD &04
+val2 DCD &08
+	END
+		

@@ -1,0 +1,21 @@
+		AREA arith3, CODE, READWRITE
+ENTRY
+		MOV R0, #1
+		MOV R1, #2
+		MOV R3, #3
+		CMP R0, R1
+		BLE 11
+		CMP R1, R3
+		BLE 12
+		MOV R2,R3
+
+11		CMP R0, R3
+		BLE 13
+		MOV R2, R3
+
+12		MOV R2, R1
+		B LOOP
+13		MOV R2, R0
+LOOP	B LOOP
+		
+		END

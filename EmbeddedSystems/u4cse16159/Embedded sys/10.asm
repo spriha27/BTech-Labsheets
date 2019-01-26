@@ -1,0 +1,17 @@
+		AREA prog, CODE, READWRITE
+
+ENTRY	
+		LDR R0,=val
+		LDR R0, [R0]
+		MOV R7, #0X000000FF
+		MOV R1, R0, LSR #24
+		MOV R2, R0, LSR #16
+		AND R2, R2, R7
+		MOV R3, R0, LSR #8
+		AND R3, R3, R7
+		AND R4, R0, R7
+
+LOOP 	B LOOP
+
+val     dcd 0X12345678
+		END

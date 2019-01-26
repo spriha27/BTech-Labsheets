@@ -1,0 +1,7 @@
+		AREA ari7, CODE, READONLY
+		ENTRY
+		MOV R0, #2
+		MOV R1, #3
+		MOV R2, #5
+		MLA R3, R0, R1, R2
+END

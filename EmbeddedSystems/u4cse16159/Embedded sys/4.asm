@@ -1,0 +1,7 @@
+	AREA pgm1, CODE, READWRITE
+ENTRY
+	LDR R0,val1
+	LSL R0, #3
+STOP
+val1 DCD &1
+	END

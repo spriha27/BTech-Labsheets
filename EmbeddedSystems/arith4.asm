@@ -1,0 +1,8 @@
+		AREA ari4, CODE, READONLY
+		ENTRY
+		MOV R0, #1
+		MOV R1, #3
+		MOV R2, R1
+		MOV R1, R0
+		MOV R0, R2
+END
