@@ -1,0 +1,56 @@
+﻿create table student(
+id int primary key,
+name varchar(15),
+state varchar(15),
+dept_name varchar(15)
+);
+
+create table prereq_course(
+course_id int,
+pre_req_courseid int
+);
+
+create table advisor(
+student_id int,
+instructor_id int
+);
+
+create table register(
+student_id int,
+course_id int,
+grade varchar(1)
+);
+
+alter table student add column cgpa numeric(9,2);
+alter table student add column tution_fee numeric(9,2);
+alter table student add column bus_fee numeric(9,2);
+
+/*alter column state type varchar(30);
+alter column state type varchar(80);*/
+/*insert into student values(1, 'student_123');
+alter table student_123 rename to student;*/
+
+/*alter table student add column time_of_arrival time;
+alter table student add column tution_fee
+alter table student add column date_of_arrival date;*/
+drop table student;
+insert into student values(1, 'Aruna', 'Andhra Pradesh', 'Comp_science', 9.6, 89000,100);
+insert into student values(2, 'Spriha', 'West Bengal', 'Comp_science', 9.3,45600,70);
+insert into student values(3, 'Ashni', 'Gujarat', 'Arts', 10,75000,12);
+insert into student values(4, 'Shanmukhi', 'Kerala', 'Biology', 7.7,50000,0);
+insert into student values(5, 'Chandni', 'Jharkhand', 'Dance', 6.7,57000,0);
+select* from student;
+
+select name from student where name like 'A%' or name like 'C%';
+select count(*) from student where dept_name='Comp_science';
+select* from student order by name DESC;
+select* from student order by name DESC, state ASC;
+select * from student where state='Kerala' and cgpa>8;
+select * from student where state='Kerala' or cgpa>8;
+select * from student where cgpa>5 and cgpa<8;
+select * from student where state in ('Kerala','Andhra Pradesh','Tamil Nadu');
+select max(cgpa) from student;
+select min(cgpa) from student;
+select sum(tution_fee) from student;
+select sum(tution_fee+bus_fee) as total from student;
+select * from student where bus_fee=0;

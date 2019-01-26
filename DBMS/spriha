@@ -1,0 +1,63 @@
+﻿create table customer(
+cid varchar(10),
+cname varchar(25),
+city varchar(15)
+);
+
+create table product(
+Pid varchar(10),
+Pname varchar(25),
+Price numeric(5,2)
+);
+
+create table Bill(
+BillNo varchar(10),
+BillDate date,
+BillAmt numeric(6,2),
+cid varchar(10)
+);
+
+create table ordr (
+BillNo varchar(10),
+Pid varchar(10),
+Quantity int
+);
+
+alter table customer add primary key (cid);
+alter table product add primary key(Pid);
+alter table Bill add primary key(BillNo);
+alter table Bill add foreign key (cid) references customer;
+alter table ordr add primary key(BillNo, Pid);
+alter table ordr add foreign key (BillNo) references Bill;
+
+insert into product values('a101','A',1),('a102','B',2),('a103','C',3),('a104','D',4),('a105','E',5);
+alter table product add column barcode int;
+alter table product alter column barcode add constraint UNIQUE;
+update product set barcode= 101 where pid='a101';
+update product set barcode= 102 where pid='a102';
+update product set barcode= 103 where pid='a103';
+update product set barcode= 104 where pid='a104';
+update product set barcode= 105 where pid='a105';
+select * from product;
+
+insert into customer values('c1','S','city1'),('c2','T','city2'),('c3','U','city3'),('c4','V','city4'),('c5','W','city1'),('c6','X','city2'),('c7','Y','city3'),('c8','Z','city5');
+select * from customer;
+select cname from customer cs1, customer c2 where c1.city=c2.city;
+
+insert into Bill values('b1','12 October 2018', 100, 'c1'),('b2','12 October 2018', 200, 'c2'),('b3','12 October 2018', 300, 'c3'),('b4','12 December 2018', 400, 'c4'),('b5','12 February 2018', 500, 'c5');
+select * from Bill;
+select * from bill where BillAmt>(select avg(BillAmt) from Bill);
+
+select cname from customer where exists (select * from Bill,customer where customer.cid=bill.cid);
+
+insert into Ordr values('b1','a101',10),('b2','a102', 20),('b3','a103', 30),('b4','a104', 40),('b5','a105', 50);
+select * from ordr;
+select * from product natural join ordr where product.pid=ordr.pid;
+
+select sum(quantity) from ordr where billno=(select billno from bill where billno group by billdate);
+
+drop table customer;
+drop table product;
+drop table Bill;
+drop table ordr;
+

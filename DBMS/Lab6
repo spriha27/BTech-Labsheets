@@ -1,0 +1,27 @@
+﻿select * from course
+
+select name, building from instructor, department where instructor.dept_name=department.dept_name;
+select name, title from instructor,course,teaches where instructor.id=teaches.id and teaches.course_id=course.course_id;
+alter table instructor add column gender varchar(3);
+update instructor set gender='F' where id='45565';
+update instructor set gender='M' where id='12121';
+update instructor set gender='M' where id='32343';
+update instructor set gender='M' where id='98345';
+update instructor set gender='M' where id='76766';
+update instructor set gender='M' where id='10101';
+update instructor set gender='F' where id='58583';
+update instructor set gender='F' where id='83821';
+update instructor set gender='M' where id='15151';
+update instructor set gender='F' where id='33456';
+update instructor set gender='F' where id='76543';
+update instructor set gender='M' where id='22222';
+
+select name, title, course.course_id from instructor,course,teaches where instructor.gender='F' and instructor.id=teaches.id and teaches.course_id=course.course_id;
+select title, budget from course,department where course.dept_name=department.dept_name;
+select name, title from instructor, course, teaches where course.title='Robotics' and instructor.id=teaches.id and teaches.course_id=course.course_id;
+select dept_name,count(*) from instructor group by dept_name having count(*)>2 order by dept_name
+select name, title, year from instructor, course, teaches, department where department.dept_name='Comp. Sci.' and teaches.year='2016' and instructor.id=teaches.id and teaches.course_id=course.course_id;
+select name, title from instructor, course, teaches, department where department.dept_name='Comp. Sci.' and teaches.year='2016' and instructor.id=teaches.id and teaches.course_id=course.course_id;
+select id,count(*) from teaches group by id
+select id,count(*) from teaches where year='2017' group by id 
+

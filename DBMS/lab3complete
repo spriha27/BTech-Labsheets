@@ -1,0 +1,137 @@
+﻿﻿create table course(
+course_id varchar(7),
+title varchar(50),
+dept_name varchar(20),
+credits numeric(2,0),
+primary key(course_id),
+foreign key(dept_name) references department);
+
+create table department(
+dept_name varchar(20),
+building varchar(15),
+budget numeric(12,2),
+primary key (dept_name)
+);
+
+create table instructor(
+ID varchar(5),
+name varchar(20)not null,
+dept_name varchar(20),
+salary numeric(8,2),
+primary key(ID),
+foreign key(dept_name) references department);
+
+insert into course values
+('BIO-101', 'Intro. to Biology', 'Biology', 4), 
+('BIO-301', 'Genetics', 'Biology', 4), 
+('BIO-399', 'Computational Biology', 'Biology', 3), 
+('CS-102','Intro. into Computer Science', 'Comp. Sci.', 4), 
+('CS-190', 'Game Design', 'Comp. Sci.', 4),
+('CS-315', 'Robotics', 'Comp. Sci.', 3),
+('CS-319', 'Image Processing', 'Comp. Sci.', 3), 
+('CS-347', 'Database System Concepts', 'Comp. Sci.', 3), 
+('EE-181', 'Intro. to Digital Systems', 'Elec. Eng.', 3),
+('FN-201', 'Investment Banking', 'Finance', 3),
+('HIS-351', 'World History', 'History', 3),
+('MU-199', 'Music Video Production', 'Music', 3),
+('PHY-101', 'Physical Principles', 'Physics', 4);
+
+insert into department values
+('Comp. Sci.', 'Taylor', 100000),
+('Biology', 'Watson', 90000),
+('Elec. Eng.', 'Taylor', 85000),
+('Music', 'Packard', 80000),
+('Finance', 'Painter', 120000),
+('History', 'Painter', 50000),
+('Physics', 'Watson', 70000);
+
+insert into instructor values
+('22222', 'Einstein', 'Physics', 95000),
+('12121', 'Wu', 'Finance', 90000),
+('32343', 'El Said', 'History', 60000),
+('45565', 'Katz', 'Comp. Sci.', 75000),
+('98345', 'Kim', 'Elec. Eng.', 80000),
+('76766', 'Crick', 'Biology', 72000),
+('10101', 'Srinivasan', 'Comp. Sci.', 65000),
+('58583', 'Califieri', 'History', 62000),
+('83821', 'Brandt', 'Comp. Sci.', 92000),
+('15151', 'Mozart', 'Music', 40000),
+('33456', 'Gold', 'Physics', 87000),
+('76543', 'Singh', 'Finance', 80000);
+
+select * from teaches;
+drop table section;
+
+create table section(
+course_id varchar(30),
+sec_id varchar(10),
+semester numeric(1,0),
+year numeric(4,0),
+building varchar(20),
+room_no varchar(5),
+primary key(course_id, sec_id, semester, year),
+foreign key(course_id) references course);
+
+create table teaches(
+ID varchar(30),
+course_id varchar(30),
+semester numeric(1,0),
+sec_id varchar(20),
+year numeric(4,0),
+primary key(ID, course_id, sec_id, semester, year),
+foreign key(course_id, sec_id, semester, year) references section);
+
+insert into teaches values(76766, 'BIO-101',1,1,2017);
+insert into teaches values(45565, 'CS-190',2,11,2018);
+insert into teaches values(83821, 'CS-315',3,12,2016);
+insert into teaches values(10101, 'CS-102',5,13,2017);
+insert into teaches values(98345, 'EE-181',5,41,2015);
+insert into teaches values(76766, 'BIO-301',4,61,2016);
+
+insert into section values('BIO-101',1,1,2017,2,301);
+insert into section values('CS-190',11,2,2018,3,654);
+insert into section values('CS-315',12,3,2016,5,345);
+insert into section values('CS-102',13,5,2017,2,243);
+insert into section values('EE-181',41,5,2015,5,354);
+insert into section values('BIO-301',61,4,2016,3,123);
+
+
+select count() from teaches where year=2017;
+select distinct ID from teaches where year=2017 and semester=5;
+select avg(budget) from department where building='Painter';
+select room_no from section order by room_no ASC;
+select max(budget) from department;
+
+alter table section add column day varchar(10);
+alter table section add start_time time;
+alter table section add end_time time;
+
+update section set day='Monday', start_time='12:00:00', end_time='2:00:00' where sec_id='1';
+update section set day='Tuesday', start_time='1:00:00', end_time='3:00:00' where sec_id='11';
+update section set day='Wednesday', start_time='2:00:00', end_time='4:00:00' where sec_id='12';
+update section set day='Tuesday', start_time='10:00:00', end_time='11:00:00' where sec_id='13';
+update section set day='Friday', start_time='4:00:00', end_time='6:00:00' where sec_id='41';
+update section set day='Saturday', start_time='5:00:00', end_time='7:00:00' where sec_id='61';
+
+select * from section where start_time<'12:00:00' and day='Tuesday' and semester=5 and year=2017;
+select course_id as ins_76766 from teaches where ID='76766';
+select ID||name as name_id from instructor;
+select avg(credits) as average from course where dept_name='Comp. Sci.' or dept_name='CSA';
+
+alter table instructor add column date_of_birth date;
+select * from instructor;
+
+update instructor set date_of_birth='1990-02-02' where id='45565';
+update instructor set date_of_birth='1989-10-31' where id='22222';
+update instructor set date_of_birth='1975-04-29' where id='12121';
+update instructor set date_of_birth='1980-05-14' where id='32343';
+update instructor set date_of_birth='1984-07-06' where id='98345';
+update instructor set date_of_birth='1960-08-22' where id='76766';
+update instructor set date_of_birth='1987-02-17' where id='10101';
+update instructor set date_of_birth='1977-01-24' where id='58583';
+update instructor set date_of_birth='1964-05-30' where id='83821';
+update instructor set date_of_birth='1989-05-16' where id='15151';
+update instructor set date_of_birth='1981-09-29' where id='33456';
+update instructor set date_of_birth='1947-11-26' where id='76543';
+
+select *, extract (year from age (current_date,date_of_birth)) as age from instructor;
