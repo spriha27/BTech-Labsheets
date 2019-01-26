@@ -1,0 +1,43 @@
+public class Test {
+	public static void main(String[] args){
+	BinarySearchTree bst=new BinarySearchTree();
+	bst.insert_Element(100);
+	bst.insert_Element(50);
+	bst.insert_Element(75);
+	bst.insert_Element(300);
+	bst.insert_Element(250);
+	bst.insert_Element(20);
+	bst.insert_Element(70);
+	bst.insert_Element(400);
+	bst.insert_Element(150);
+	bst.insert_Element(80);
+	System.out.println("preorder:");
+	bst.pre_Order(bst.root);
+	System.out.println();
+	System.out.println("inorder:");
+	bst.in_Order(bst.root);
+	System.out.println();
+	System.out.println("postorder:");
+	bst.post_Order(bst.root);	
+	System.out.println();
+	bst.search_Element(bst.root,20);
+	System.out.println();
+	bst.search_Element(bst.root,250);
+	System.out.println();
+	bst.search_Element(bst.root,25);
+	bst.min_Element();
+	bst.max_Element();
+	bst.delete(20);
+	bst.in_Order(bst.root);
+	System.out.println();
+	bst.delete(75);
+	bst.in_Order(bst.root);
+	System.out.println();
+	bst.delete(300);
+	bst.in_Order(bst.root);
+	System.out.println();
+	bst.delete(100);
+	bst.in_Order(bst.root);
+	System.out.println();
+	}
+}
