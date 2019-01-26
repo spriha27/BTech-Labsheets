@@ -1,0 +1,220 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/Modeltech_pe_edu_10.4a/examples
+vmultiplexer
+!s110 1541640390
+!i10b 1
+!s100 V`?zdd^OdF00]_iTiAd353
+IQd2NToC=F@dVA5AzOgcOj3
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 dC:/Users/Administrator/Desktop/New folder (2)
+w1541639982
+Z2 8C:/Users/Administrator/Desktop/New folder (2)/mux21_struc.v
+Z3 FC:/Users/Administrator/Desktop/New folder (2)/mux21_struc.v
+L0 2
+Z4 OP;L;10.4a;61
+r1
+!s85 0
+31
+!s108 1541640390.000000
+Z5 !s107 C:/Users/Administrator/Desktop/New folder (2)/mux21_struc.v|
+Z6 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Administrator/Desktop/New folder (2)/mux21_struc.v|
+!s101 -O0
+!i113 1
+Z7 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact -O0
+vmux21
+!s110 1541640385
+!i10b 1
+!s100 4oDGLNlVAo`dJ@D6I1;541
+I@<Ne_`K<3f@=ijZMklGJO3
+R0
+R1
+w1541639917
+Z8 8C:/Users/Administrator/Desktop/New folder (2)/mux21_cont.v
+Z9 FC:/Users/Administrator/Desktop/New folder (2)/mux21_cont.v
+L0 2
+R4
+r1
+!s85 0
+31
+!s108 1541640385.000000
+Z10 !s107 C:/Users/Administrator/Desktop/New folder (2)/mux21_cont.v|
+Z11 !s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Administrator/Desktop/New folder (2)/mux21_cont.v|
+!s101 -O0
+!i113 1
+R7
+vmux21_behav
+!s110 1541641901
+!i10b 1
+!s100 0FbOcGMJen32az19@M?6X1
+IEzWhYijlL`mzQ[ezK6LL_2
+R0
+R1
+w1541641897
+8C:/Users/Administrator/Desktop/New folder (2)/mux21_behav.v
+FC:/Users/Administrator/Desktop/New folder (2)/mux21_behav.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1541641901.000000
+!s107 C:/Users/Administrator/Desktop/New folder (2)/mux21_behav.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Administrator/Desktop/New folder (2)/mux21_behav.v|
+!s101 -O0
+!i113 1
+R7
+vmux21_cont
+!s110 1541641909
+!i10b 1
+!s100 Yc>OUR`DlCB]kh_diS13h0
+Ih@GUlj8>k6LNGe5C<=DKD1
+R0
+R1
+w1541640633
+R8
+R9
+L0 2
+R4
+r1
+!s85 0
+31
+!s108 1541641909.000000
+R10
+R11
+!s101 -O0
+!i113 1
+R7
+vmux21_struc
+!s110 1541641911
+!i10b 1
+!s100 ]8MLF_f5X?Pe>Z8C=3DXg1
+I]oL3i8gPX;DZkEkzLM=`d3
+R0
+R1
+w1541640680
+R2
+R3
+L0 2
+R4
+r1
+!s85 0
+31
+!s108 1541641911.000000
+R5
+R6
+!s101 -O0
+!i113 1
+R7
+vmux41
+!s110 1541642124
+!i10b 1
+!s100 LdZm<DJ;907nTQKj=]klb0
+I>9hdhIc=ok:L1ON>9E>H`1
+R0
+R1
+w1541641980
+8C:/Users/Administrator/Desktop/New folder (2)/mux41_struc.v
+FC:/Users/Administrator/Desktop/New folder (2)/mux41_struc.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1541642124.000000
+!s107 C:/Users/Administrator/Desktop/New folder (2)/mux41_struc.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Administrator/Desktop/New folder (2)/mux41_struc.v|
+!s101 -O0
+!i113 1
+R7
+vmux41_behav
+!s110 1541641913
+!i10b 1
+!s100 [`E<lC2aHib2@1BCj[LPH1
+IK:XLWQOgAHa`zc4Km4zP`1
+R0
+R1
+w1541640659
+8C:/Users/Administrator/Desktop/New folder (2)/mux41_behav.v
+FC:/Users/Administrator/Desktop/New folder (2)/mux41_behav.v
+L0 2
+R4
+r1
+!s85 0
+31
+!s108 1541641913.000000
+!s107 C:/Users/Administrator/Desktop/New folder (2)/mux41_behav.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Administrator/Desktop/New folder (2)/mux41_behav.v|
+!s101 -O0
+!i113 1
+R7
+vmux_dataflow
+!s110 1541642122
+!i10b 1
+!s100 aeX?Tc4P=Ya_3WBocTKeG0
+IjKC3S9I^G9e=02Xm_G?NL2
+R0
+R1
+w1541642118
+8C:/Users/Administrator/Desktop/New folder (2)/mux41_cont.v
+FC:/Users/Administrator/Desktop/New folder (2)/mux41_cont.v
+L0 2
+R4
+r1
+!s85 0
+31
+!s108 1541642122.000000
+!s107 C:/Users/Administrator/Desktop/New folder (2)/mux41_cont.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Administrator/Desktop/New folder (2)/mux41_cont.v|
+!s101 -O0
+!i113 1
+R7
+vmux_dataflow_tb
+!s110 1541642307
+!i10b 1
+!s100 TTgkf7M8^FKW=F[zZ4JXZ3
+IECF4`aSUkWU@MelG4[D;k0
+R0
+R1
+w1541642256
+8C:/Users/Administrator/Desktop/New folder (2)/tb_mux41_cont.v
+FC:/Users/Administrator/Desktop/New folder (2)/tb_mux41_cont.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1541642307.000000
+!s107 C:/Users/Administrator/Desktop/New folder (2)/tb_mux41_cont.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Administrator/Desktop/New folder (2)/tb_mux41_cont.v|
+!s101 -O0
+!i113 1
+R7
+vtb_mux_behav
+!s110 1541642305
+!i10b 1
+!s100 HVbV;`BKmj^gmm_6d>MC13
+I`D>^ndOWXIZUSfmjTg^Sm1
+R0
+R1
+w1541642215
+8C:/Users/Administrator/Desktop/New folder (2)/tb_mux41_behav.v
+FC:/Users/Administrator/Desktop/New folder (2)/tb_mux41_behav.v
+L0 1
+R4
+r1
+!s85 0
+31
+!s108 1541642305.000000
+!s107 C:/Users/Administrator/Desktop/New folder (2)/tb_mux41_behav.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/Administrator/Desktop/New folder (2)/tb_mux41_behav.v|
+!s101 -O0
+!i113 1
+R7

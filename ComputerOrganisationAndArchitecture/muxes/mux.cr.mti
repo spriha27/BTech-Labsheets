@@ -1,0 +1,60 @@
+{C:/Users/Administrator/Desktop/New folder (2)/mux41_cont.v} {1 {vlog -work work -stats=none {C:/Users/Administrator/Desktop/New folder (2)/mux41_cont.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module mux_dataflow
+
+Top level modules:
+	mux_dataflow
+
+} {} {}} {C:/Users/Administrator/Desktop/New folder (2)/mux21_behav.v} {1 {vlog -work work -stats=none {C:/Users/Administrator/Desktop/New folder (2)/mux21_behav.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module mux21_behav
+
+Top level modules:
+	mux21_behav
+
+} {} {}} {C:/Users/Administrator/Desktop/New folder (2)/tb_mux41_cont.v} {1 {vlog -work work -stats=none {C:/Users/Administrator/Desktop/New folder (2)/tb_mux41_cont.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module mux_dataflow_tb
+
+Top level modules:
+	mux_dataflow_tb
+
+} {} {}} {C:/Users/Administrator/Desktop/New folder (2)/mux41_struc.v} {1 {vlog -work work -stats=none {C:/Users/Administrator/Desktop/New folder (2)/mux41_struc.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module mux41
+
+Top level modules:
+	mux41
+
+} {} {}} {C:/Users/Administrator/Desktop/New folder (2)/tb_mux41_struc.v} {1 {vlog -work work -stats=none {C:/Users/Administrator/Desktop/New folder (2)/tb_mux41_struc.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+
+} {} {}} {C:/Users/Administrator/Desktop/New folder (2)/mux41_behav.v} {1 {vlog -work work -stats=none {C:/Users/Administrator/Desktop/New folder (2)/mux41_behav.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module mux41_behav
+
+Top level modules:
+	mux41_behav
+
+} {} {}} {C:/Users/Administrator/Desktop/New folder (2)/mux21_cont.v} {1 {vlog -work work -stats=none {C:/Users/Administrator/Desktop/New folder (2)/mux21_cont.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module mux21_cont
+
+Top level modules:
+	mux21_cont
+
+} {} {}} {C:/Users/Administrator/Desktop/New folder (2)/tb_mux41_behav.v} {1 {vlog -work work -stats=none {C:/Users/Administrator/Desktop/New folder (2)/tb_mux41_behav.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module tb_mux_behav
+
+Top level modules:
+	tb_mux_behav
+
+} {} {}} {C:/Users/Administrator/Desktop/New folder (2)/mux21_struc.v} {1 {vlog -work work -stats=none {C:/Users/Administrator/Desktop/New folder (2)/mux21_struc.v}
+Model Technology ModelSim PE Student Edition vlog 10.4a Compiler 2015.03 Apr  7 2015
+-- Compiling module mux21_struc
+
+Top level modules:
+	mux21_struc
+
+} {} {}}

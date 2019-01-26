@@ -1,0 +1,12 @@
+module mux21_behav(
+	input i0,i1,sel,
+	output reg y);
+
+	always @(i0 or i1 or sel)
+	begin
+		case(sel):
+			1'b0:y=i0;
+			1'b1:y=i1;
+		endcase
+	end
+endmodule

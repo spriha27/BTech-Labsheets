@@ -1,0 +1,10 @@
+module halfadder(
+input x,y,
+output reg s,c);
+   always @(x,y)
+   begin
+   s = x | y;
+   always @(x,y)
+   assign c = x & y;
+   end
+endmodule
