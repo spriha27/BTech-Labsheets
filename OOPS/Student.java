@@ -1,28 +1,18 @@
-import java.io.*;	
-import java.util.*;
-public class Student implements Serializable
-{
+import java.io.*;
+
+public class Student implements Serializable{
 	private String name;
-	private int rollNo;
-	private ArrayList <Course> coursesTaken=new ArrayList <Course>();
-	public Student(String n,int r,ArrayList<Course> c)
-	{
-		name=n;
-		rollNo=r;
-		this.coursesTaken.addAll(c);
+	private int rollno;
+	
+	public Student(String name, int rollno){
+		this.name = name;
+		this.rollno = rollno;
 	}
-	public String getName()
-	{
+	public String getName(){
 		return name;
 	}
-	public int getRollNo()
-	{
-		return rollNo;
-	}
-	public ArrayList<Course> getCourses(){
-		return coursesTaken;
-	}
-	public String toString(){
-		return ("Student: "+this.name+" Roll No: "+this.rollNo);
+	public int getRollNo(){
+		return rollno;
 	}
 }
+
